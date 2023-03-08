@@ -131,3 +131,6 @@ dmypy.json
 # data
 data/raw
 data/data_preprocessed
+
+# presentation
+*.pptx

@@ -20,7 +20,7 @@ RSEED = 42
 
 from data_cleaning_feature_engineering import extract_dict_item, drop_column, filter_transform_target, round_values, make_encode, check_column_completeness
 
-#kickstarter data
+# Importing kickstarter data
 print('Importing Data')
 path = r'data/raw' # use your path
 all_files = glob.glob(os.path.join(path , "*.csv"))

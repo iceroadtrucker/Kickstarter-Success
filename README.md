@@ -33,6 +33,13 @@ Environment:
 For installing the virtual environment you can either use the Makefile and run `make setup` or install it manually with the following commands: 
 
 ```Bash
+make setup 
+
+#activate env
+source .venv/bin/activate
+
+or
+
 pyenv local 3.9.8
 python -m venv .venv
 source .venv/bin/activate
@@ -44,30 +51,24 @@ pip install -r requirements.txt
 
 ## Training
 
-!!! Make sure you have downloaded the right dataset, saved it in the existing data folder and 
-changed the your data path under Importing Data!!!
+!!! Make sure you have downloaded the right dataset, saved it in the existing /data folder and 
+changed your data path in Kickstarter_succes_files/train.py in chapter: Importing Kickstarter data!!!
 
 In order to train the model and store test data in the automatically created folders /data_preprocessed and /model run:
 
 ```bash
-#activate env
-source .venv/bin/activate
-
-
-Then run:
-
-python Kickstarter_succes_files/train.py  
+python Kickstarter_succes_files/predict.py
 ```
 
 ## Prediction
 
 !!! Make sure that your test set has the same structure and the same number of columns as 
-the example in the /data/Kickstarter_test folder !!!
+the example in /data/Kickstarter_test/kickstarter_example.csv !!!
 
-In order to test that predict works on your test set you created run:
+In order to test the prediction on your test set you run:
 
 ```bash
-python Kickstarter_succes_files/predict.py models/linear_regression_model.sav data/X_test.csv data/y_test.csv
+python Kickstarter_succes_files/predict.py 
 ```
 
 ## Limitations
