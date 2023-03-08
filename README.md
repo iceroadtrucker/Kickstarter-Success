@@ -40,21 +40,34 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-## Usage
+## __Usage__
 
-In order to train the model and store test data in the data folder and the model in models run:
+## Training
+
+!!! Make sure you have downloaded the right dataset, saved it in the existing data folder and 
+changed the your data path under Importing Data!!!
+
+In order to train the model and store test data in the automatically created folders /data_preprocessed and /model run:
 
 ```bash
 #activate env
 source .venv/bin/activate
 
-python example_files/train.py  
+
+Then run:
+
+python Kickstarter_succes_files/train.py  
 ```
 
-In order to test that predict works on a test set you created run:
+## Prediction
+
+!!! Make sure that your test set has the same structure and the same number of columns as 
+the example in the /data/Kickstarter_test folder !!!
+
+In order to test that predict works on your test set you created run:
 
 ```bash
-python example_files/predict.py models/linear_regression_model.sav data/X_test.csv data/y_test.csv
+python Kickstarter_succes_files/predict.py models/linear_regression_model.sav data/X_test.csv data/y_test.csv
 ```
 
 ## Limitations
